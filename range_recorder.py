@@ -40,7 +40,10 @@ def get_score():
             elif(keypress == constants.GET_GRAPH_KEY):
                 console.reset()
                 console.plot_all_scores()
-        remain_str = get_ocr_str(ip.get_remain_region())
+        try:
+            remain_str = get_ocr_str(ip.get_remain_region())
+        except pytesseract.TesseractNotFoundError:
+            exit("Tesseract path is wrong or tesseract is not installed!\nYou can check the path in constants.py at line 2.")
         if "30" in remain_str:
             console.reset()
             console.print_range_found()
