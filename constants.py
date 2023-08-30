@@ -1,5 +1,5 @@
 # Path/file names
-TESSERACT_PATH = r'Tesseract-OCR\tesseract'
+TESSERACT_PATH = r'C:\Program Files\Tesseract-OCR\tesseract.exe'
 OUT_DIRNAME = "output_files"
 ALLSCORES_PATH = "output_files/_allscores.csv"
 
